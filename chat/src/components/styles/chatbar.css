@@ -1,0 +1,150 @@
+
+
+
+
+  @media only screen and (max-width: 768px) {
+    .messageContent{
+        max-width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+    }
+  }
+  
+  /* Media query for laptops/desktops */
+  @media only screen and (min-width: 769px) {
+    .messageContent{
+        max-width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+    }
+  }
+
+.chatInfo{
+    height: 50px;
+    background-color: rgb(26, 26, 81);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    color: lightgray;
+
+}
+
+.chatIcons{
+    display: flex;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
+/* messages ------------------------------------------------*/
+
+.messages{
+    background-color: rgb(110, 110, 190);
+    padding: 10px;
+    height: calc(100% - 160px );
+    overflow-y: scroll;
+}
+
+.msginput{
+    height: 50px;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.owner .messageinfo {
+    align-self: flex-end; /* Align messageinfo to the right for owner's messages */
+  }
+
+.inputin{
+    width: 100%;
+    border: none;
+    outline: none;
+    color: rgb(32, 34, 40);
+}
+
+.inputin::placeholder{
+    font-size: 17px;
+    color: rgb(107, 98, 98);
+}
+
+.send{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sendbutton{
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    background-color: rgb(43, 43, 103);
+}
+
+
+
+
+
+
+
+/* message -----------------------------------------------------*/
+
+
+.message{
+    display: flex;
+    gap: 20px;
+}
+.owner {
+    display: flex;
+    gap: 20px;
+}
+ .messageinfo{
+    display: flex;
+    color: gray;
+    font-weight: 300;
+    flex-direction: column;
+}
+.messageinfo > img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.message p{
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 0px 10px 10px 10px;
+    max-width: max-content;
+}
+.messageContent > img {
+    width: 50%;
+}
+
+.owner{
+    flex-direction: row-reverse;
+}
+.owner > .messageContent{
+    align-items: flex-end;
+}
+
+.owner p{
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px 0px 10px 10px;
+    max-width: max-content;
+}
+
+.owner .messageinfo {
+    align-items: flex-end;
+}
