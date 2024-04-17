@@ -8,13 +8,14 @@
     }
 
     .logout-button{
-        background-color: rgb(71, 71, 150);
+        background-color: rgba(71, 71, 150, 0);
         color: whitesmoke;
         font-size: 10px;
         cursor: pointer;
-        position: absolute;
-        bottom: 3px;
-        left: 3px;
+        position: relative;
+        right: 0px;
+        border: 1px rgba(36, 46, 114, 0.558) solid;
+
     }   
   }
   
@@ -23,12 +24,13 @@
     .navlogo{
         font-weight: bold;
         font-family: 'Arial Black', sans-serif; /* Custom font for bold appearance */
-    font-size: 25px; /* Adjust font size as needed */
-    color: #2c88eb; /* Font color */
-    text-shadow: 2px 2px 4px rgba(252, 252, 252, 0.279); 
+         font-size: 25px; /* Adjust font size as needed */
+         color: #ffffffc6; /* Font color */
+        text-shadow: 3px 3px 2px rgb(60, 51, 128); 
     }
     .logout-button{
-        background-color: rgb(71, 71, 150);
+        background-color: rgba(71, 71, 150, 0);
+        border: 1px rgba(36, 46, 114, 0.558) solid;
         color: whitesmoke;
         font-size: 10px;
         cursor: pointer;
@@ -40,10 +42,10 @@
 .navbar{
     display: flex;
     align-items: center;
-    background-color: rgb(14, 14, 60);
     height: 50px;
     padding: 10px;
     justify-content: space-between ;
+    backdrop-filter: blur(20px);
 }
 
 
@@ -74,10 +76,11 @@
 
 .search{
     border-bottom: 1px solid gray ;
-   
+    backdrop-filter: blur(10px);
 }
 .SearchForm{
     display: flex;
+    
 }
 .search-button{
     font-size: 25px;
@@ -94,7 +97,8 @@
 
 .chatss{
     overflow-y: scroll;
-    height: 500px;
+    height: 100%;
+    
 }
 .chatss::-webkit-scrollbar {
     width: 0; /* Remove the scrollbar width */
@@ -103,22 +107,27 @@
     padding: 10px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 13px;
     color: white;
     cursor: pointer;
+    border-top: 1px rgb(38, 38, 91) solid;
+    backdrop-filter: blur(2px);
+
 }
 
 .userChat:hover{
-    background-color:rgb(14, 14, 60) ;
+    backdrop-filter: blur(30px);
 }
 
 .userChatInfo > span{
     font-size: 18px;
     font-weight: 500;
+    margin-top: 10px;
 }
 
 .userChatInfo > p{
-font-size: 14px;
+    margin-top: 5px;
+font-size: 13px;
 color: lightblue;
 }
 

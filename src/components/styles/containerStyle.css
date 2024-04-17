@@ -3,7 +3,6 @@
 .sidebar{
     flex: 1;
     border-right: 1px solid rgb(22, 22, 110);
-    background-color: rgb(35, 35, 117);
 }
 
 .chat{

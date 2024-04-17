@@ -88,7 +88,7 @@ const handleSend = async()=>{
         <label htmlFor="file">
           <img src={addimg} alt="" width={"35px"} />
         </label>
-        <button className='sendbutton' onClick={handleSend} onKeyDown={handleKey}>Send</button>
+        <button className='sendbutton' onClick={handleSend} onKeyDown={handleKey}>&#x27A3;</button>
       </div>
     </div>
   )

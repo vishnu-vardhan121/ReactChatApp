@@ -25,8 +25,7 @@ function Chat() {
         <span style={{fontSize:"23px",paddingLeft:"10px"}}>{data.user?.displayName}</span>
         </div>
          <div className="chatIcons">
-        <img src={cam} alt=""  width={"24px"} height={"24px"}/>
-        <img src={addcant} alt=""  width={"24px"} height={"24px"}/>
+        <img src={cam} alt=""  width={"24px"} height={"24px"} style={{borderRadius:"50%"}}/>
         <img src={more} alt=""  width={"24px"} height={"24px"}/>
 
         </div>

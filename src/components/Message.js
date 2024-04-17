@@ -24,7 +24,7 @@ const ref =useRef()
         <div className={message.senderId === currentUser.uid ? "owner" : "message"}>
           <div className="messageinfo">
             <img src={message.senderId === currentUser.uid ? currentUser.photoURL : data.user.photoURL} alt="" />
-            <span>{messageTime}</span>
+            <span className='time'>{messageTime}</span>
           </div>
           <div className="messageContent">
             {message.text && <p>{message.text}</p>}
