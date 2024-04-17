@@ -5,7 +5,7 @@
         background-image: url(./w11.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        height: 100vh;
+        height: calc(100vh - 60px);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -13,7 +13,7 @@
     
     .container{
         width: 100%;
-        height: 98vh;
+        height: 100%;
         position: absolute;
         top: 0px;
         display: flex;
