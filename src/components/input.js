@@ -13,10 +13,25 @@ function Input() {
 
   const [text ,setText] =useState("")
   const [img ,setImg] =useState(null)
-
+  const [preview, setPreview] = useState(null);
   const {currentUser} = useContext(AuthContext)
   const {data} = useContext(ChatContext)
 
+  const handleimage = (event) => {
+    const file = event.target.files[0];
+    setImg(file);
+
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setPreview(reader.result);
+    };
+    if (file) {
+      reader.readAsDataURL(file);
+    } else {
+      setPreview(null);
+    }
+  };
+  
   const handleKey = (e) => {
     e.code === "Enter" && handleSend();
   };
@@ -74,6 +89,7 @@ const handleSend = async()=>{
 
    setText("")
    setImg(null)
+   setPreview(null)
 
   
   }
@@ -84,9 +100,9 @@ const handleSend = async()=>{
       <input type="text" placeholder='Message' className='inputin' onKeyDown={handleKey} onChange={e=>setText(e.target.value)} value={text}/>
       <div className="send">
         <img src={attach} alt="" width={"24px"} />
-        <input type="file"  style={{display:"none"}} id='file' onKeyDown={handleKey}  onChange={e=>setImg(e.target.files[0])} />
+        <input type="file"  style={{display:"none"}} id='file' onKeyDown={handleKey}  onChange={handleimage} />
         <label htmlFor="file">
-          <img src={addimg} alt="" width={"35px"} />
+          {preview?<img src={preview} className='previewimg'/>:<img src={addimg} alt="" width={"35px"} />}
         </label>
         <button className='sendbutton' onClick={handleSend} onKeyDown={handleKey}>&#x27A3;</button>
       </div>

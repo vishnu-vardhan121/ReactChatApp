@@ -86,11 +86,37 @@
   font-size: 12px;
   
 }
-
+ 
 .button:hover {
   background-color: #0057b38b;
   transform: scale(1.05);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.profile-preview{
+width: 40px;
+height: 40px;
+border-radius: 50%;
+object-fit: cover;
+}
+
+
+.default-user-button {
+  width: fit-content;
+  text-shadow:1px 1px 1px rgb(152, 145, 145);
+  margin-top: 10px;
+  border-radius: 5px;
+  color: #080808;
+  cursor: pointer;
+  backdrop-filter: blur(0.000px);
+}
+
+.default-user-button:hover {
+  color: #ffffff;
+}
+.error-message{
+  font-size: 14px;
+  color: red;
 }
 
 @media (min-width: 768px) {

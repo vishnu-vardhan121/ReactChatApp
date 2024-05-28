@@ -22,13 +22,15 @@ const ref =useRef()
     <>
       {message.img || message.text ? (
         <div className={message.senderId === currentUser.uid ? "owner" : "message"}>
+          <div>
           <div className="messageinfo">
             <img src={message.senderId === currentUser.uid ? currentUser.photoURL : data.user.photoURL} alt="" />
             <span className='time'>{messageTime}</span>
           </div>
+          </div>
           <div className="messageContent">
             {message.text && <p>{message.text}</p>}
-            {message.img && <img src={message.img} alt="" />}
+            {message.img && <img src={message.img} alt="" style={{width:"150px"}}/>}
           </div>
         </div>
       ) : null}

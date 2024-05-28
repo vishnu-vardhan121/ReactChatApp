@@ -2,15 +2,16 @@
 /* navbar style */
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 500px) {
     .navlogo{
        display: none;
     }
 
     .logout-button{
-        background-color: rgba(71, 71, 150, 0);
+        background-color: rgb(6, 6, 6);
         color: whitesmoke;
-        font-size: 10px;
+        
+        font-size: 5px;
         cursor: pointer;
         position: relative;
         right: 0px;
@@ -20,7 +21,7 @@
   }
   
   /* Media query for laptops/desktops */
-  @media only screen and (min-width: 769px) {
+  @media only screen and (min-width: 500px) {
     .navlogo{
         font-weight: bold;
         font-family: 'Arial Black', sans-serif; /* Custom font for bold appearance */
@@ -29,14 +30,16 @@
         text-shadow: 3px 3px 2px rgb(60, 51, 128); 
     }
     .logout-button{
-        background-color: rgba(71, 71, 150, 0);
+        background-color: rgba(78, 78, 122, 0.7);
         border: 1px rgba(36, 46, 114, 0.558) solid;
+        border-radius: 50%;
         color: whitesmoke;
-        font-size: 10px;
+        font-size: 6.5px;
         cursor: pointer;
     }  
  
   }
+  
 
 
 .navbar{
@@ -45,7 +48,8 @@
     height: 50px;
     padding: 10px;
     justify-content: space-between ;
-    backdrop-filter: blur(20px);
+    background-color: rgba(14, 13, 13, 0.559);
+    backdrop-filter: blur(30px);
 }
 
 
@@ -57,10 +61,16 @@
 
 .profile-image{
     background-color: antiquewhite;
-    height: 25px;
-    width: 25px;
+    position: relative;
+    top:6px;
+    height: 27px;
+    width: 27px;
     border-radius: 50%;
     object-fit: cover;
+}
+.chatlastmessage{
+    width: 50px;
+    overflow: hidden
 }
 
 
@@ -96,8 +106,8 @@
 }
 
 .chatss{
-    overflow-y: scroll;
-    height: 100%;
+    overflow-y: auto;
+    height: calc(100vh - 100px);
     
 }
 .chatss::-webkit-scrollbar {
@@ -110,13 +120,14 @@
     gap: 13px;
     color: white;
     cursor: pointer;
-    border-top: 1px rgb(38, 38, 91) solid;
-    backdrop-filter: blur(2px);
+    border-bottom: 2px rgb(38, 38, 91) solid;
+    backdrop-filter: blur(5px);
 
 }
 
 .userChat:hover{
     backdrop-filter: blur(30px);
+    background-color: rgba(240, 248, 255, 0.105);
 }
 
 .userChatInfo > span{
@@ -147,7 +158,41 @@ color: lightblue;
     object-fit: cover;
 }
 
+/* .............................. */
+.suserChat{
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: white;
+    cursor: pointer;
+    border-top: 1px rgb(38, 38, 91) solid;
+    backdrop-filter: blur(2px);
 
+}
+.suserChat:hover{
+    background-color: rgba(240, 248, 255, 0.155);
+}
+
+.suserChatImg{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.suserChatInfo > span{
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.ucm{
+    max-height: 150px;
+    overflow-y: scroll;
+}
+.ucm::-webkit-scrollbar {
+    width: 0; /* Remove the scrollbar width */
+  }
 
 
 

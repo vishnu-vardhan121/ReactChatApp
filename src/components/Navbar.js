@@ -10,9 +10,9 @@ function Navbar() {
     <div className='navbar'>
       <span className='navlogo'>ChatiFy</span>
       <div  className='user'>
-        <img src={currentUser.photoURL} alt=""  className='profile-image'/>
-        <span style={{fontSize:"26px",color:"white"}}>{currentUser.displayName}</span>
-        <button className='logout-button' onClick={()=>signOut(auth)}>logOut</button>
+        <div><img src={currentUser.photoURL} alt=""  className='profile-image'/></div>
+        <span style={{fontSize:"26px",color:"white"}}>{currentUser.displayName.toUpperCase()}</span>
+        <button className='logout-button' onClick={()=>signOut(auth)}>LOGOUT</button>
       </div>
     </div>
   )

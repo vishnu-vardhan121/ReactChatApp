@@ -13,8 +13,8 @@ function HomePage() {
     <div className="home">
       <div className="container">
         {
-          displayWidth <769 ? 
-          pageState ?<Sidebar/> :<Chat/>
+          displayWidth <500 ? 
+          pageState ?<Sidebar/> : <Chat/>
           :<>
           <Sidebar/>
           <Chat/>

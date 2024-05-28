@@ -14,12 +14,11 @@ function Chat() {
   const { data } = useContext(ChatContext)
   const {displayWidth}=useContext(DispWidthContext)
   const {pageState ,handlePageChange} =useContext(PageContext)
-  console.log(displayWidth);
   return (
     <div className='chat'>
       <div className="chatInfo">
         <div style={{display:'flex'}}>
-          {displayWidth < 769 && <span className='arrow' onClick={handlePageChange}>&#x21e0;</span>}
+          {displayWidth < 499 && <span className='arrow' onClick={handlePageChange}>&#8617;</span>}
         
         <img src={data.user?.photoURL} alt="" style={{width :"30px", height:"30px",objectFit: "cover",borderRadius:"50%"}}/>
         <span style={{fontSize:"23px",paddingLeft:"10px"}}>{data.user?.displayName}</span>

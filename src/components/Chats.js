@@ -44,7 +44,7 @@ function Chats() {
         />
         <div className="userChatInfo">
           <span>{chat[1].userInfo.displayName}</span>
-          <p>{chat[1].lastMessage?.text}</p>
+          <p className="chatlastmessage">{chat[1].lastMessage?.text}</p>
         </div>
         </div>
         ))}

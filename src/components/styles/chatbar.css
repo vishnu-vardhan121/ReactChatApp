@@ -2,7 +2,7 @@
 
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 500px) {
     .messageContent{
         max-width: 90%;
         display: flex;
@@ -13,7 +13,7 @@
   }
   
   /* Media query for laptops/desktops */
-  @media only screen and (min-width: 769px) {
+  @media only screen and (min-width: 500px) {
     .messageContent{
         max-width: 80%;
         display: flex;
@@ -23,14 +23,17 @@
     }
   }
 
+
+
 .chatInfo{
-    backdrop-filter: blur(10px);
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
     color: lightgray;
+    background-color: rgba(14, 13, 13, 0.559);
+    backdrop-filter: blur(30px);
 
 }
 .arrow{
@@ -69,7 +72,7 @@
 
 .msginput{
     height: 30px;
-    background-color: rgba(99, 103, 118, 0.344);
+    background-color: rgba(108, 109, 111, 0.344);
     border-radius: 25px;
     padding: 10px;
     display: flex;
@@ -78,14 +81,16 @@
 
 .owner .messageinfo {
     align-self: flex-end; /* Align messageinfo to the right for owner's messages */
-  }
+    position: relative;
+    top: 0%;
+}
 
 .inputin{
     width: 100%;
     border: none;
     outline: none;
     background: none;
-    color: rgb(251, 252, 255);
+    color: rgb(255, 255, 255);
     font-size: 16px;
 }
 
@@ -128,6 +133,7 @@ background-color: rgb(53, 58, 101);
 .owner {
     display: flex;
     gap: 20px;
+    flex-direction: row-reverse;
 }
  .messageinfo{
     display: flex;
@@ -143,22 +149,26 @@ background-color: rgb(53, 58, 101);
 }
 
 .message p{
+
     background-color: rgba(252, 248, 248, 0.241);
     backdrop-filter: blur(2px);
-    color: white;
-    padding: 10px 20px;
+    color: white;   
+    padding: 10px 15px;
+    width: 100%;
     border-radius: 0px 10px 10px 10px;
-    max-width: max-content;
+    word-wrap: break-word;
+    white-space: normal;
 }
 .messageContent > img {
     width: 50%;
 }
 
-.owner{
-    flex-direction: row-reverse;
-}
 .owner > .messageContent{
     align-items: flex-end;
+    max-width:100px;
+}
+.message > .messageContent{
+    max-width:100px ;
 }
 
 .time{
@@ -169,11 +179,19 @@ background-color: rgb(53, 58, 101);
     background-color: rgba(252, 248, 248, 0.241);
     backdrop-filter: blur(2px);
     color: white;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 10px 0px 10px 10px;
-    max-width: max-content;
+    width: 100%;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
 .owner .messageinfo {
     align-items: flex-end;
+}
+
+.previewimg{
+    object-fit: cover;
+    width: 35px;
+    height: 35px;
 }
